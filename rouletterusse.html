@@ -1,72 +1,62 @@
-
 </html>
 <head>
 <script>
+	compteur = 0;
+	select1 = 0;
+	select2 = 0;
+	select3 = 0;
+function fct2(id){	
+	document.getElementById("Br"+id).style.fill="red";
+	compteur = compteur+1;
+	select3 = select2;
+	select2 = select1;
+	select1 = id;
+}
+
 function lancer(){
-           var Val = Math.floor((Math.random() * 6)+1);
-		   if(document.getElementById("Br"+Val).style.fill=="red"){alert("Perdu");}
-		   else{alert("Gagné");}
-		   
-		   document.getElementById("Br"+Val).style.fill="blue";
-	     		}
-function trou1(){
-          if(document.getElementById("Br1").style.fill=="red"){
-			 document.getElementById("Br1").style.fill="gray";	
-		  }
-		  else{document.getElementById("Br1").style.fill="red";}		  
+		Tourner = parseInt(Math.random()*6);
+		alert(Tourner)
+		document.getElementById("Br"+Tourner).style.fill="blue";
+	        if(compteur>3){
+			alert("Maximum 3 selections autorisees, desole !")
+		}
+		if(Tourner==select1){
+			alert("Vous avez perdu !")
+		}
+		else if(Tourner==select2){
+			alert("Vous avez perdu !")
+		}
+		else if(Tourner==select3){
+			alert("Vous avez perdu !")
+		}
+		else if (compteur==3) {
+			alert("Vous gagnez 1.000.000 euros")
+		}
+		else if (compteur==2) {
+			alert("Vous gagnez 100.000 euros")
+		}
+		else if (compteur==1) {
+			alert("Vous gagnez 10.000 euros")
+		}
+		
 }
 
-function trou2(){
-          if(document.getElementById("Br2").style.fill=="red"){
-			 document.getElementById("Br2").style.fill="gray";	
-		  }
-		  else{document.getElementById("Br2").style.fill="red";}
-}
 
-function trou3(){
-          if(document.getElementById("Br3").style.fill=="red"){
-			 document.getElementById("Br3").style.fill="gray";	
-		  }
-		  else{document.getElementById("Br3").style.fill="red";}
-}
 
-function trou4(){
-          if(document.getElementById("Br4").style.fill=="red"){
-			 document.getElementById("Br4").style.fill="gray";	
-		  }
-		  else{document.getElementById("Br4").style.fill="red";}
-}
-
-function trou5(){
-          if(document.getElementById("Br5").style.fill=="red"){
-			 document.getElementById("Br5").style.fill="gray";	
-		  }
-		  else{document.getElementById("Br5").style.fill="red";}
-}
-
-function trou6(){
-          if(document.getElementById("Br6").style.fill=="red"){
-			 document.getElementById("Br6").style.fill="gray";	
-		  }
-		  else{document.getElementById("Br6").style.fill="red";}
-}
 
 </script>
-
-
-
 </head>
 <body>
 	<h1>Roulette Russe</h1>
 
 	<svg width=200 height=200 style="background-color:antiquewhite">
 	<circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none" />
-	<circle onclick="trou1()" id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" />
-	<circle onclick="trou2()" id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" />
-	<circle onclick="trou6()" id="Br6" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" />
-	<circle onclick="trou5()" id="Br5" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" />
-	<circle onclick="trou3()" id="Br3" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" />
-	<circle onclick="trou4()" id="Br4" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" />
+	<circle onclick="fct2(0)" id="Br0" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" />
+	<circle onclick="fct2(1)" id="Br1" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" />
+	<circle onclick="fct2(2)" id="Br2" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" />
+	<circle onclick="fct2(3)" id="Br3" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" />
+	<circle onclick="fct2(4)" id="Br4" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" />
+	<circle onclick="fct2(5)" id="Br5" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" />
 	<circle cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black" />
 	</svg>	
 	
@@ -74,4 +64,5 @@ function trou6(){
 	
 </body>
 </html>
+
 
