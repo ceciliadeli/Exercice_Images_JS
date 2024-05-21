@@ -2,12 +2,12 @@
 <head>
 <script>
 function fct2(id){
-	document.getElementById("Br"+(Tourner-1)).style.fill="blue";
+	document.getElementById("Br"+id).style.fill="red";
 }
 
 function lancer(){
 		Tourner = parseInt(Math.random()*6);
-			document.getElementById(Tourner).style.fill="red";
+			document.getElementById("Br"+(Tourner-1)).style.fill="blue";
 }
 </script>
 </head>
