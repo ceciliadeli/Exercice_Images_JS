@@ -28,7 +28,6 @@ function bouger(){
 		   var ballblueY = parseInt(document.getElementById('ballblue').getAttribute("cy"));
 		var ballX = parseInt(document.getElementById('ball').getAttribute("cx"));
 	  var ballY = parseInt(document.getElementById('ball').getAttribute("cy"));
-
 	if(ballblueX>ballX){
 		document.getElementById('ballblue').setAttribute("cx", ballblueX-15);
 	}
@@ -45,13 +44,7 @@ function bouger(){
 	if (ballblueX==ballX&&ballblueY==ballY) {
 		alert("Perdu, vous vous etes fait attrapes !");
 	}
-	
-}
-
-
-	
-	
-  
+	}  
 function deplacement(evt) {
 		   var ballX = parseInt(document.getElementById('ball').getAttribute("cx"));
 		   var ballY = parseInt(document.getElementById('ball').getAttribute("cy"));
