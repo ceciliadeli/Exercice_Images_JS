@@ -26,14 +26,12 @@ function bouger(){
 	//Code à créer pour faire bouger la boule enemy
 			   var ballblueX = parseInt(document.getElementById('ballblue').getAttribute("cx"));
 		   var ballblueY = parseInt(document.getElementById('ballblue').getAttribute("cy"));
-           switch (evt.keyCode) {
-                // Gauche 
-                case 41:
-	ballblueX -= 15;
+                          // Gauche 
+               	ballblueX -= 15;
                     	if(ballblueX<15){ballblueX=15;}
-			document.getElementById('ball').setAttribute("cx", ballblueX);
+			document.getElementById('ballblue').setAttribute("cx", ballblueX);
 			break;
-			   }
+	
 }
 
 
