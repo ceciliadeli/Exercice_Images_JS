@@ -21,20 +21,24 @@ function principale(){
 	}
 
 function bouger(){
-
 	//Code à créer pour faire bouger la boule enemy
-			   var ballblueX = parseInt(document.getElementById('ballblue').getAttribute("cx"));
+		   var ballblueX = parseInt(document.getElementById('ballblue').getAttribute("cx"));
 		   var ballblueY = parseInt(document.getElementById('ballblue').getAttribute("cy"));
                           // Gauche 
                	ballblueX -= 15;
                     	if(ballblueX<15){ballblueX=15;}
 			document.getElementById('ballblue').setAttribute("cx", ballblueX);
-					if ballX -= 15;
-                    	if(ballX<15){ballX=15;ballblueX -=15}
-if(ballblueX<15){ballblueX=15;}
-			document.getElementById('ball').setAttribute("cx", ballX);}
-	document.getElementById('balllue').setAttribute("cx", ballblueX);}
+				}
 
+
+
+     // Gauche 
+                case 37:
+			ballX -= 15;
+                    	if(ballX<15){ballX=15;}
+			document.getElementById('ball').setAttribute("cx", ballX);
+			break;
+	
 
 function deplacement(evt) {
 		   var ballX = parseInt(document.getElementById('ball').getAttribute("cx"));
