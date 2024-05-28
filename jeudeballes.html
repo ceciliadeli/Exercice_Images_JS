@@ -29,17 +29,7 @@ function bouger(){
                     	if(ballblueX<15){ballblueX=15;}
 			document.getElementById('ballblue').setAttribute("cx", ballblueX);
 				}
-
-
-
-     // Gauche 
-                case 37:
-			ballX -= 15;
-                    	if(ballX<15){ballX=15;}
-			document.getElementById('ball').setAttribute("cx", ballX);
-			break;
-	
-
+  
 function deplacement(evt) {
 		   var ballX = parseInt(document.getElementById('ball').getAttribute("cx"));
 		   var ballY = parseInt(document.getElementById('ball').getAttribute("cy"));
