@@ -20,14 +20,36 @@ function principale(){
 	enemy = setInterval(bouger, speed);
 	}
 
+	
+
 function bouger(){
 	//Code à créer pour faire bouger la boule enemy
 		   var ballblueX = parseInt(document.getElementById('ballblue').getAttribute("cx"));
 		   var ballblueY = parseInt(document.getElementById('ballblue').getAttribute("cy"));
-                          // Gauche 
-               	ballblueX -= 15;
-                    	if(ballblueX<15){ballblueX=15;}
-			document.getElementById('ballblue').setAttribute("cx", ballblueX);}
+		var ballX = parseInt(document.getElementById('ball').getAttribute("cx"));
+	  var ballY = parseInt(document.getElementById('ball').getAttribute("cy"));
+
+	if(ballblueX>ballX){
+		document.getElementById('ballblue').setAttribute("cx", ballblueX-15);
+	}
+	else if(ballblueX<ballX){
+		document.getElementById('ballblue').setAttribute("cx", ballblueX+15);
+	}
+	
+	if(ballblueY>ballY){
+		document.getElementById('ballblue').setAttribute("cy", ballblueY-15);
+	}
+	else if(ballblueY<ballY) {
+		document.getElementById('ballblue').setAttribute("cy", ballblueY+15);		
+	}
+	if (ballblueX==ballX&&ballblueY==ballY) {
+		alert("Perdu, vous vous etes fait attrapes !");
+	}
+	
+}
+
+
+	
 	
   
 function deplacement(evt) {
